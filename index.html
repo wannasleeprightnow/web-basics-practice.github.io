@@ -18,21 +18,31 @@
   <!-- Позиционированием relative для абсолютных элементов внутри. -->
   <section class="aperture-studios" id="home">
     <header>
-      <!-- display: flex для выравнивания элементов, justify-content: space-between для распределения пространства. -->
       <nav class="main-nav">
-        <!-- Изображение логотипа: SVG-файл для масштабируемости, alt-текст для доступности. -->
         <img src="img/aperture_logo.svg" class="main-nav__logo" alt="logo" />
-
-        <!-- Нумерованный список main-nav__list -->
         <ul class="main-nav__list" id="navMenu">
           <li class="main-nav__item"><a href="#business-areas" class="main-nav__link">Business areas</a></li>
           <li class="main-nav__item"><a href="#featured" class="main-nav__link">Featured images</a></li>
           <li class="main-nav__item"><a href="#gear" class="main-nav__link">Gear cage</a></li>
           <li class="main-nav__item"><a href="#contact" class="main-nav__link">Contact</a></li>
-          <li class="main-nav__item"><a href="#" class="main-nav__button">Get template</a></li>
+          <li class="main-nav__item">
+            <a href="#" class="main-nav__button" id="getTemplateBtn">Get template</a>
+            <div id="templateForm" class="template-form" style="display: none;">
+              <h3>Request template</h3>
+              <form id="requestForm">
+                <input type="text" name="name" placeholder="Enter your name" class="form__input" required>
+                <input type="email" name="email" placeholder="Enter your email" class="form__input" required>
+                <button type="submit" class="btn">Send</button>
+              </form>
+            </div>
+          </li>
+
+          <div id="notificationContainer" style="position: fixed; top: 20px; right: 20px; z-index: 9999;"></div>
+          </li>
         </ul>
       </nav>
     </header>
+
 
     <!-- flex-direction: column для вертикального стека элементов -->
     <div class="main-text">
@@ -360,7 +370,7 @@
       </div>
       <div class="site-footer__form-wrapper">
         <form class="site-footer__form" id="subscribeForm" action="#">
-          <input type="email" id="emailInput" placeholder="Enter your email" required />
+          <input type="email" id="emailInput" placeholder="Enter your email" class="form__input" required />
           <button type="submit"></button>
         </form>
         <p class="form-message" id="formMessage"></p>

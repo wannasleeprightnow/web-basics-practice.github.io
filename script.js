@@ -48,7 +48,7 @@ const appearOnScroll = new IntersectionObserver(function (
     appearOnScroll.unobserve(entry.target);
   });
 },
-appearOptions);
+  appearOptions);
 
 fadeElements.forEach((element) => {
   appearOnScroll.observe(element);
@@ -76,4 +76,51 @@ subscribeForm.addEventListener("submit", function (e) {
   setTimeout(() => {
     formMessage.textContent = "";
   }, 3000);
+});
+
+const getTemplateBtn = document.getElementById('getTemplateBtn');
+const templateForm = document.getElementById('templateForm');
+const formContainer = document.getElementById('templateForm');
+
+getTemplateBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    templateForm.style.display = templateForm.style.display === 'block' ? 'none' : 'block';
+});
+
+document.getElementById('requestForm').addEventListener('submit', async function (e) {
+    e.preventDefault();
+
+    const name = this.name.value;
+    const email = this.email.value;
+
+    try {
+        const response = await fetch('submit.php', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({name, email})
+        });
+
+        const data = await response.json();
+
+        const notification = document.createElement('div');
+        notification.className = 'notification';
+        notification.textContent = data.message;
+        
+        if (data.status === 'error') {
+            notification.classList.add('error');
+        }
+        
+        document.getElementById('notificationContainer').appendChild(notification);
+
+        setTimeout(() => notification.classList.add('show'), 15);
+        setTimeout(() => {
+            notification.classList.remove('show');
+            setTimeout(() => notification.remove(), 400);
+        }, 3000);
+
+        e.target.reset();
+        templateForm.style.display = 'none';
+    } catch (err) {
+        console.error(err);
+    }
 });

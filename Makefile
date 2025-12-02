@@ -17,7 +17,7 @@ stop:
 
 restart: stop
 	docker rm $(CONTAINER_NAME)
-	$(MAKE) run
+	$(MAKE) all
 
 logs:
 	docker logs -f $(CONTAINER_NAME)
