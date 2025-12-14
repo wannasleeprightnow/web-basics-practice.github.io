@@ -1,11 +1,11 @@
 FROM nginx:alpine
 
 RUN apk add --no-cache \
-    php82 \
-    php82-fpm \
-    php82-json \
-    php82-mbstring \
-    && ln -s /usr/bin/php82 /usr/bin/php \
+    php83 \
+    php83-fpm \
+    php83-mbstring \
+    && ln -s /usr/bin/php83 /usr/bin/php \
+    && ln -s /usr/sbin/php-fpm83 /usr/sbin/php-fpm \
     && rm -rf /usr/share/nginx/html/* \
     && rm -rf /var/cache/apk/*
 
@@ -13,8 +13,8 @@ COPY index.html script.js *.php /usr/share/nginx/html/
 COPY css/ /usr/share/nginx/html/css/
 COPY img/ /usr/share/nginx/html/img/
 COPY nginx.conf /etc/nginx/conf.d/default.conf
-COPY php-fpm.conf /etc/php82/php-fpm.conf
+COPY php-fpm.conf /etc/php83/php-fpm.conf
 
 EXPOSE 80
 
-CMD php-fpm82 -D && nginx -g "daemon off;"
+CMD php-fpm -D && nginx -g "daemon off;"

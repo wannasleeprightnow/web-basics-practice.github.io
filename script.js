@@ -88,7 +88,7 @@ getTemplateBtn.addEventListener('click', (e) => {
 });
 
 document.getElementById('requestForm').addEventListener('submit', async function (e) {
-    e.preventDefault();
+    // e.preventDefault();
 
     const name = this.name.value;
     const email = this.email.value;
