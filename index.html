@@ -1,138 +1,185 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="css/style.css">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-    rel="stylesheet">
-</head>
-
-<body>
-  <section class="star-fall">
-    <div class="star-fall__text fade-in">
-      <p class="star-fall__text-title">Star fall in the Himalayas</p>
-      <p class="star-fall__text-description">
-        Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex,
-        condimentum dapibus congue et, vulputate ut ligula.
-      </p>
-    </div>
-
-    <nav class="icons-nav">
-      <ul class="icons-nav__list">
-        <li class="icons-nav__item">
-          <img class="icons-nav__icon" src="img/icon_clock.svg" alt="Время экспозиции" width="16" height="16" />
-          <p class="icons-nav__value">6''</p>
-        </li>
-        <li class="icons-nav__item">
-          <img class="icons-nav__icon" src="img/icon_focus.svg" alt="Фокусное расстояние" width="16" height="16" />
-          <p class="icons-nav__value">f/11</p>
-        </li>
-        <li class="icons-nav__item">
-          <img class="icons-nav__icon" src="img/icon_iso.svg" alt="ISO" width="32" height="16" />
-          <p class="icons-nav__value">800</p>
-        </li>
-        <li class="icons-nav__item">
-          <img class="icons-nav__icon" src="img/icon_mark.svg" alt="Место съёмки" width="10" height="16" />
-          <p class="icons-nav__value">Nepal</p>
-        </li>
-      </ul>
-    </nav>
-  </section>
-
-  <section class="need-help" id="contact">
-    <div class="need-help__text fade-in">
-      <h2 class="need-help__title">
-        Need help with photography<br> or videography?
-      </h2>
-      <h4 class="need-help__subtitle">We're here for you!</h4>
-      <button type="button" class="btn">
-        <span class="btn__circle"></span>
-        Get in touch
-      </button>
-    </div>
-  </section>
-
-  <!-- Футер site-footer: Background-color: #000, padding: 100px 120px 60px, flex-direction: column с gap: 70px, max-width: 1168px для центрирования. -->
-  <footer class="site-footer">
-    <!-- Верхняя часть футера: Display: flex с justify-content: space-between для распределения блоков. -->
-    <div class="site-footer__top">
-      <!-- Левый блок: Flex-direction: column с gap: 12px, max-width: 320px. -->
-      <div class="site-footer__top-left">
-        <!-- Логотип футера: Ширина 140px. -->
-        <div class="site-footer__logo">
-          <img src="img/footer_logo.svg" alt="Aperture Photography logo" />
-        </div>
-        <p class="site-footer__slogan">
-          Photographers & videographers capturing the world around us.
+  <body>
+    <section class="star-fall">
+      <div class="star-fall__text fade-in">
+        <p class="star-fall__text-title">Star fall in the Himalayas</p>
+        <p class="star-fall__text-description">
+          Nulla rhoncus feugiat eros quis consectetur. Morbi neque ex,
+          condimentum dapibus congue et, vulputate ut ligula.
         </p>
       </div>
 
-      <div class="site-footer__links">
-        <div class="site-footer__block">
-          <p class="site-footer__heading">BUSINESS AREAS</p>
-          <ul class="site-footer__list">
-            <li class="site-footer__item">Product Photography</li>
-            <li class="site-footer__item">Architecture Photography</li>
-            <li class="site-footer__item">Drone Photography</li>
-            <li class="site-footer__item">Wildlife Photography</li>
-          </ul>
+      <nav class="icons-nav">
+        <ul class="icons-nav__list">
+          <li class="icons-nav__item">
+            <img
+              class="icons-nav__icon"
+              src="img/icon_clock.svg"
+              alt="Время экспозиции"
+              width="16"
+              height="16"
+            />
+            <p class="icons-nav__value">6''</p>
+          </li>
+          <li class="icons-nav__item">
+            <img
+              class="icons-nav__icon"
+              src="img/icon_focus.svg"
+              alt="Фокусное расстояние"
+              width="16"
+              height="16"
+            />
+            <p class="icons-nav__value">f/11</p>
+          </li>
+          <li class="icons-nav__item">
+            <img
+              class="icons-nav__icon"
+              src="img/icon_iso.svg"
+              alt="ISO"
+              width="32"
+              height="16"
+            />
+            <p class="icons-nav__value">800</p>
+          </li>
+          <li class="icons-nav__item">
+            <img
+              class="icons-nav__icon"
+              src="img/icon_mark.svg"
+              alt="Место съёмки"
+              width="10"
+              height="16"
+            />
+            <p class="icons-nav__value">Nepal</p>
+          </li>
+        </ul>
+      </nav>
+    </section>
+
+    <section class="need-help" id="contact">
+      <div class="need-help__text fade-in">
+        <h2 class="need-help__title">
+          Need help with photography<br />
+          or videography?
+        </h2>
+        <h4 class="need-help__subtitle">We're here for you!</h4>
+        <button type="button" class="btn">
+          <span class="btn__circle"></span>
+          Get in touch
+        </button>
+      </div>
+    </section>
+
+    <!-- Футер site-footer: Background-color: #000, padding: 100px 120px 60px, flex-direction: column с gap: 70px, max-width: 1168px для центрирования. -->
+    <footer class="site-footer">
+      <!-- Верхняя часть футера: Display: flex с justify-content: space-between для распределения блоков. -->
+      <div class="site-footer__top">
+        <!-- Левый блок: Flex-direction: column с gap: 12px, max-width: 320px. -->
+        <div class="site-footer__top-left">
+          <!-- Логотип футера: Ширина 140px. -->
+          <div class="site-footer__logo">
+            <img src="img/footer_logo.svg" alt="Aperture Photography logo" />
+          </div>
+          <p class="site-footer__slogan">
+            Photographers & videographers capturing the world around us.
+          </p>
         </div>
 
-        <div class="site-footer__block">
-          <p class="site-footer__heading">PAGES</p>
-          <ul class="site-footer__list">
-            <li class="site-footer__item">Gear cage</li>
-            <li class="site-footer__item">Featured images</li>
-            <li class="site-footer__item">Contact</li>
-            <li class="site-footer__item">Style guide</li>
-            <li class="site-footer__item">Instructions</li>
-            <li class="site-footer__item">Changelog</li>
-          </ul>
+        <div class="site-footer__links">
+          <div class="site-footer__block">
+            <p class="site-footer__heading">BUSINESS AREAS</p>
+            <ul class="site-footer__list">
+              <li class="site-footer__item">Product Photography</li>
+              <li class="site-footer__item">Architecture Photography</li>
+              <li class="site-footer__item">Drone Photography</li>
+              <li class="site-footer__item">Wildlife Photography</li>
+            </ul>
+          </div>
+
+          <div class="site-footer__block">
+            <p class="site-footer__heading">PAGES</p>
+            <ul class="site-footer__list">
+              <li class="site-footer__item">Gear cage</li>
+              <li class="site-footer__item">Featured images</li>
+              <li class="site-footer__item">Contact</li>
+              <li class="site-footer__item">Style guide</li>
+              <li class="site-footer__item">Instructions</li>
+              <li class="site-footer__item">Changelog</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
 
-    <!-- Горизонтальная линия для разделения секций. -->
-    <hr>
+      <!-- Горизонтальная линия для разделения секций. -->
+      <hr />
 
-    <!-- display: flex с justify-content: space-between, flex-wrap: wrap для адаптивности. -->
-    <div class="site-footer__subscribe">
-      <div class="site-footer__subscribe-text">
-        <p class="site-footer__heading">Subscribe to our newsletter</p>
-        <p class="site-footer__description">Read about all the things we do.</p>
+      <div class="site-footer__subscribe">
+        <div class="site-footer__subscribe-text">
+          <p class="site-footer__heading">Login</p>
+          <p class="site-footer__description">Please enter your details.</p>
+        </div>
+        <div class="site-footer__form-wrapper">
+          <form class="site-footer__form" id="loginForm">
+            <input
+              type="text"
+              id="usernameInput"
+              name="username"
+              placeholder="Username"
+              required
+            />
+            <input
+              type="password"
+              id="passwordInput"
+              name="password"
+              placeholder="Password"
+              required
+            />
+            <button type="submit">Log In</button>
+          </form>
+          <p class="form-message" id="formMessage"></p>
+        </div>
       </div>
-      <div class="site-footer__form-wrapper">
-        <form class="site-footer__form" id="subscribeForm" action="#">
-          <input type="email" id="emailInput" placeholder="Enter your email" required />
-          <button type="submit"></button>
-        </form>
-        <p class="form-message" id="formMessage"></p>
+      <hr />
+
+      <div class="site-footer__bottom">
+        <p class="site-footer__copyright">
+          © Aperture Photography, Inc. All rights reserved. Licensing
+        </p>
+        <div class="site-footer__socials">
+          <img
+            class="site-footer__icon"
+            src="img/icon_twitter.svg"
+            alt="Twitter"
+          />
+          <img
+            class="site-footer__icon"
+            src="img/icon_inst.svg"
+            alt="Instagram"
+          />
+          <img
+            class="site-footer__icon"
+            src="img/icon_facebook.svg"
+            alt="Facebook"
+          />
+        </div>
       </div>
-    </div>
+    </footer>
 
-    <hr>
+    <!-- Кнопка "Наверх" -->
+    <button class="scroll-to-top" id="scrollToTop">↑</button>
 
-    <div class="site-footer__bottom">
-      <p class="site-footer__copyright">
-        © Aperture Photography, Inc. All rights reserved. Licensing
-      </p>
-      <div class="site-footer__socials">
-        <img class="site-footer__icon" src="img/icon_twitter.svg" alt="Twitter" />
-        <img class="site-footer__icon" src="img/icon_inst.svg" alt="Instagram" />
-        <img class="site-footer__icon" src="img/icon_facebook.svg" alt="Facebook" />
-      </div>
-    </div>
-  </footer>
-
-  <!-- Кнопка "Наверх" -->
-  <button class="scroll-to-top" id="scrollToTop">↑</button>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

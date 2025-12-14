@@ -40,26 +40,46 @@ fadeElements.forEach((element) => {
   appearOnScroll.observe(element);
 });
 
-// Валидация введеной почты при помощи регулярки
-const subscribeForm = document.getElementById("subscribeForm");
-const emailInput = document.getElementById("emailInput");
+const loginForm = document.getElementById("loginForm");
+const usernameInput = document.getElementById("usernameInput");
+const passwordInput = document.getElementById("passwordInput");
 const formMessage = document.getElementById("formMessage");
 
-subscribeForm.addEventListener("submit", function (e) {
+loginForm.addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const email = emailInput.value.trim();
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const username = usernameInput.value.trim();
+  const password = passwordInput.value.trim();
 
-  if (emailRegex.test(email)) {
-    formMessage.textContent = "✓ Thank you for subscribing!";
-    formMessage.style.color = "green";
-    emailInput.value = "";
-  } else {
-    formMessage.textContent = "✗ Please enter a valid email address";
+  fetch('submit.php', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      username: username,
+      password: password
+    })
+  })
+  .then(response => response.json())
+  .then(data => {
+    if (data.status === 'success') {
+      formMessage.textContent = "✓ " + data.message;
+      formMessage.style.color = "green";
+      usernameInput.value = "";
+      passwordInput.value = "";
+    } else {
+      formMessage.textContent = "✗ " + data.message;
+      formMessage.style.color = "red";
+    }
+  })
+  .catch(error => {
+    console.error('Error:', error);
+    formMessage.textContent = "✗ Server error. Please try again later.";
     formMessage.style.color = "red";
-  }
+  });
+
   setTimeout(() => {
     formMessage.textContent = "";
-  }, 3000);
+  }, 5000);
 });
