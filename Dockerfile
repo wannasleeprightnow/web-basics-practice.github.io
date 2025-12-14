@@ -4,8 +4,8 @@ RUN apk add --no-cache \
     php83 \
     php83-fpm \
     php83-mbstring \
-    && ln -s /usr/bin/php83 /usr/bin/php \
-    && ln -s /usr/sbin/php-fpm83 /usr/sbin/php-fpm \
+    && ln -sf /usr/bin/php83 /usr/bin/php \
+    && ln -sf /usr/sbin/php-fpm83 /usr/sbin/php-fpm \
     && rm -rf /usr/share/nginx/html/* \
     && rm -rf /var/cache/apk/*
 
